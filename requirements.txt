@@ -1,0 +1,6 @@
+langchain_groq
+langchain_core
+dotenv
+langchain_community
+uuid
+chromadb
