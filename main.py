@@ -27,5 +27,5 @@ def create_streamlit_app(chain: Chain, portfolio: Portfolio, clean_text):
         except Exception as e:
             st.error("An error occured:", e)
 
-create_streamlit_app(Chain(), Portfolio(), clean_text)
+create_streamlit_app(Chain(st.secrets["GROQ_API_KEY"]), Portfolio(), clean_text)
     
