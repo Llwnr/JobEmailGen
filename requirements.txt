@@ -4,7 +4,7 @@ langchain-groq===0.1.9
 unstructured==0.14.6
 selenium==4.21.0
 chromadb==0.5.0
-python-build @ git+https://github.com/pypa/build@290874a119805af8bc857a412b848512b187a828
+pysqlite3-binary
 streamlit==1.35.0
 polars
 python-dotenv==1.0.0
