@@ -1,6 +1,7 @@
 __import__('pysqlite3')
 import sys
 sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 import streamlit as st
 from chains import Chain
 from portfolio import Portfolio
@@ -28,7 +29,7 @@ def create_streamlit_app(chain: Chain, portfolio: Portfolio, clean_text):
             email = chain.generate_email(job_res, links)
             st.write(email)
         except Exception as e:
-            st.error("An error occured:", e)
+            st.error("An error occured. The website has captcha/verification security, cannot fetch data.")
 
 create_streamlit_app(Chain(st.secrets["GROQ_API_KEY"]), Portfolio(), clean_text)
     
