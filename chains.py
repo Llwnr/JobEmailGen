@@ -10,7 +10,7 @@ load_dotenv() #This will set the variables in .env as environment variables
 class Chain:
     def __init__(self, api_key):
         self.llm = ChatGroq(
-            model = 'llama-3.1-70b-versatile',
+            model = 'llama-3.3-70b-versatile',
             groq_api_key = api_key,
             temperature=0,
         )
